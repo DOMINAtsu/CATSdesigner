@@ -150,10 +150,12 @@ export class MaterialsPopoverComponent {
         this.zoomInButtonVisible = false
         this.endTestButtonVisible = false
       })
+      console.log('themaId: ',this.themaId, this.studentSeconds, this.adaptivityType)
   }
 
   goToPredTest() {
     this.testService.getPredTest().subscribe((res) => {
+      console.log('res:', res);
       this.testId = `${res}`
       this.isTest = true
       this.isPredTest = true

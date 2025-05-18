@@ -74,6 +74,9 @@ export class QuestionComponent extends AutoUnsubscribeBase implements OnInit {
       this.descriptionElement.nativeElement.innerHTML =
         this.question?.Question?.Description
     }
+    console.log('Полный объект вопроса:', this.question)
+    console.log('Ответы на вопрос:', this.question.Question.Answers)
+  console.log('Ключи первого ответа:', Object.keys(this.question.Question.Answers[0]))
   }
 
   public answerQuestion(): void {
